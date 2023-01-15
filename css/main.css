@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+  /*   viewport units: 100vh () */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    font-size: 4vmin;
+    color: pink;
+    letter-spacing: 1vmin;
+  }
+  
+  h1 {
+    color: darkgray;
+    font-size: 3vmin;
+    
+    
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 20vmin);
+    grid-template-rows: repeat(3, 20vmin);
+    gap: 1vmin;
+    margin-top: 2vmin;
+    text-align: center;
+    vertical-align: center;
+    font-size: 150%;
+    color: white;
+  }
+  
+  #board > div {
+    border-radius: 10%;
+    border: .3vmin solid lightblue;
+    
+  }
+  
+  #board > div:hover {
+  /*   transform: scale(.1);
+    transition: transform 200ms ease-in; */
+    border-color: red;
+  }
+  
+  button {
+    margin-top: 4vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 1.5vmin;
+    border: .3vmin solid lightblue;
+    color: darkgray;
+    
+  }
+  
+  button:hover {
+    color: white;
+    background-color: pink;
+    border-color: darkgray;
+  }

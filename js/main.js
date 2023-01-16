@@ -1,8 +1,8 @@
 /*----- constants -----*/
 const COLORS = {
     "0": "white",
-    "1": "blue",
-    "-1": "red",
+    "1": "#0b4b9f",
+    "-1": "gold",
 }
 
 const LETTERS = {
@@ -45,7 +45,7 @@ function squareSelect (event) {
     board[idx] = turn;
     turn *= -1;
 
-    winner = getWinner();
+   winner = getWinner();
     render();
 }
 
@@ -109,17 +109,18 @@ function renderBoard() {
 
 
   function renderMessage() {
+
   if (winner === "T") {
     messageEl.innerText = "It's a Tie!!!";
-    playAgainBtn.style.visibility = "visible";
+    resetButton.style.visibility = "visible";
   } else if (winner) {
     messageEl.innerHTML = `<span style="color: ${COLORS[winner]}">${LETTERS[
       winner
     ].toUpperCase()}</span> Wins!`;
-    playAgainBtn.style.visibility = "visible";
+    resetButton.style.visibility = "visible";
   } else {
     // Game is in play
-    playAgainBtn.style.visibility = "hidden";
+    resetButton.style.visibility = "hidden";
     messageEl.innerHTML = `<span style="color: ${COLORS[turn]}">${LETTERS[
       turn
     ].toUpperCase()}</span>'s Turn`;
